@@ -14,14 +14,7 @@ namespace Unity.Template.Multiplayer.NGO.Runtime
         public static UnityServicesInitializer Instance { get; private set; }
         public MatchmakerTicketer Matchmaker { get; private set; }
 
-        public const string k_Environment =
-#if LIVE
-                                        "production";
-#elif STAGE
-                                        "staging";
-#else
-                                        "dev";
-#endif
+        public const string k_Environment = "production";
         public void Awake()
         {
             if (Instance && Instance != this)
